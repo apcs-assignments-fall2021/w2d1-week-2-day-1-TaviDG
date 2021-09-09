@@ -1,22 +1,50 @@
+import java.util.Locale;
+
 public class MyMain {
     // Takes two Strings as input, and returns a String equal to the first half
     // of the shorter String plus the second half of the longer String.
     public static String halfAdder(String str1, String str2) {
-        // REPLACE THIS WITH YOUR CODE
-        return "";
+        String addedHalves="";
+        if (str1.length()>str2.length()){
+
+            addedHalves = str2.substring(0,(str2.length())/2)+ str1.substring((str1.length())/2,str1.length());
+
+
+
+        }
+        else {
+            addedHalves = str1.substring(0,(str1.length())/2)+ str2.substring((str2.length())/2,str2.length());
+        }
+
+
+        return addedHalves;
+
     }
 
     // Takes a String as input, and returns true if the String contains an 'A' or 'a'
     // and returns false otherwise
     public static boolean checkIfA(String str) {
         // REPLACE THIS WITH YOUR CODE
+        for (int i=0; i<str.length();i++){
+            if (str.charAt(i)=='A' || str.charAt(i)=='a'){
+                return true;
+            }
+        }
         return false;
     }
 
     //  Takes in two Strings as input and returns a String equal to those two Strings added
     //  together in alphabetic order.
     public static String stringOrder(String str1, String str2) {
-        return "";
+        String x= str1.toLowerCase();
+        String y = str2.toLowerCase();
+        if (x.compareTo(y)<0){
+            return str1+str2;
+        }
+        else{
+            return str2+str1;
+        }
+
     }
 
 
